@@ -162,3 +162,11 @@ body, html {
 	opacity: 1;
 	visibility: visible;
 }
+a{
+    text-decoration: none;
+    color: #32323d;
+}
+
+a:hover {
+	color:#6e55b4;
+}
