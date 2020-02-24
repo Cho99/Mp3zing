@@ -1,5 +1,13 @@
 *{margin: 0; padding: 0}
 
+.sidebar {
+    margin-right: 50px;
+}
+
+.main {
+    margin: 5px 20px;
+}
+
 ul.list-group {
     font-size: 14px;
     width: 100%;
@@ -17,6 +25,10 @@ ul.list-group li:hover {color: #6e55b4;background-color: #efefef;}
 li.about,li.content,li.top100,li.chude {
     margin-right: 30px;
 }
+li.about,li.content,li.top100,li.chude {
+	cursor: pointer;
+}
+
 
 .line {
     border-right: 1px solid #d28484;
@@ -42,8 +54,12 @@ ul.navbar {
 ul.navbar li {
     display: flex;
     align-items: flex-end;
+    /* cursor: pointer; */
+    padding-bottom: 15px;
+}
+
+.item {
     cursor: pointer;
-    padding-bottom: 10px;
 }
 
 li.item {
@@ -66,15 +82,23 @@ body, html {
 	box-sizing: border-box;
 }
 
-.sidebar {
+.weekly-item {
 	display: flex;
 	padding: 15px 0px;
 	border-bottom: 1px solid #888;
-	background-position: center;
-	margin-right: 50px;
 }
 
-.sidebar .number {
+.weekly-item.active {
+    image-rendering: auto;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    background-image: url("https://photo-zmp3.zadn.vn/banner/f/5/c/8/f5c8d854d0c034e3b4bfc03c98b400b4.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+.weekly-item .number {
 	font-size: 20px;
 	display: flex;
 	justify-content: center;
@@ -85,17 +109,17 @@ body, html {
 	flex-grow: 1;
 
 }
-.sidebar .name-song {
+.weekly-item .name-song {
 	font-size: 15px;
 	margin-bottom: 8px;
 }
 
-.sidebar .singer {
+.weekly-item .singer {
 	font-size: 12px;
 	color: #888;
 }
 
-.sidebar .view {
+.weekly-item .view {
 	font-size: 14px;
 	color: #888;
 	display: flex;
@@ -112,7 +136,7 @@ body, html {
 	max-width: 100%;
 }
 
-.about {
+.about,.top100 {
 	position: relative;
 }
 
@@ -125,8 +149,16 @@ body, html {
 	left: 0;
 	box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
 	display: flex;
+	visibility: hidden;
+	max-width: 600px;
 }
 
 .about:hover .drop-down{
-	opacity: 1
+	opacity: 1;
+	visibility: visible;
+}
+
+.top100:hover .drop-down {
+	opacity: 1;
+	visibility: visible;
 }
