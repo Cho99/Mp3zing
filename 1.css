@@ -1,7 +1,8 @@
 *{margin: 0; padding: 0}
 
 .sidebar {
-    margin-right: 50px;
+	margin-top: 5px;
+  margin-right: 50px;
 }
 
 .main {
@@ -68,16 +69,18 @@ li.item {
     padding: 10px 10px;
 }
 body, html {
+	background-color: #fcfcfc;
+	line-height: 1.5;
 	font-family: Roboto,sans-serif;
 }
 .container {
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns:70% 30%;
 }
 
-.header,.footer {
+.header,.footer,.slide {
 	grid-column: 1/3;
-	padding-top: 10px;
+	/* padding-top: 10px; */
 	height: 100%;
 	box-sizing: border-box;
 }
@@ -169,4 +172,17 @@ a{
 
 a:hover {
 	color:#6e55b4;
+}
+.header {
+	padding-top: 10px;
+}
+.slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slides .slide img {
+	
+
+	list-style: none;
 }
